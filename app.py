@@ -6,6 +6,7 @@ import flask
 import jsons
 import tensorflow as tf
 from flask import jsonify
+from flask_cors import CORS, cross_origin
 
 from Camera import Camera
 from YoloObjectDetector import YoloObjectDetector
@@ -36,9 +37,11 @@ print('Yolov3 model loaded')
 
 print('Starting API server...')
 app = flask.Flask(__name__)
+cors = CORS(app)
 
 
 @app.route('/detect', methods=['GET'])
+@cross_origin()
 def detect():
     current_timestamp = '{0:%Y_%m_%d_%H_%M_%S}'.format(datetime.datetime.now())
     picture_file_path = 'capture_' + current_timestamp + '.jpg'
