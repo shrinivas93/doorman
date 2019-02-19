@@ -4,7 +4,7 @@
 ## Follow the steps to run the application
 
 ### 1. Install ImageAI using
-    pip3 install https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.2/imageai-2.0.2-py3-none-any.whl
+    pip install https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.2/imageai-2.0.2-py3-none-any.whl
 
 ### 2. Install other required dependencies using
     pip install -r requirements.txt
